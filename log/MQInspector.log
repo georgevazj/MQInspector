@@ -1,0 +1,571 @@
+12:53:32.954 INFO  com.bbva.mmap.Launcher - Mensaje de prueba
+13:32:14.443 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9972 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:32:14.451 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:32:14.490 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:32:14 CET 2016]; root of context hierarchy
+13:32:14.743 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:32:15.718 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:32:16.255 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@11d8ae8b
+13:32:16.282 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.311 seconds (JVM running for 3.44)
+13:32:29.341 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+13:32:29.343 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  1
+  JMSExpiration:    0
+  JMSPriority:      0
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620082f02
+  JMSTimestamp:     1458045149280
+  JMSCorrelationID: null
+  JMSDestination:   null
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: here MQ 7\bin\MQExplorer.exe
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 546
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 11
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 12322928
+TEST
+13:34:19.970 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+13:34:19.970 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  1
+  JMSExpiration:    0
+  JMSPriority:      0
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620083302
+  JMSTimestamp:     1458045259960
+  JMSCorrelationID: null
+  JMSDestination:   null
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: here MQ 7\bin\MQExplorer.exe
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 546
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 11
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 12341996
+HOLA MUNDO
+13:40:50.266 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 6388 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:40:50.271 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:40:50.348 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:40:50 CET 2016]; root of context hierarchy
+13:40:50.780 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:40:51.531 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.jms.core.JmsTemplate com.bbva.mmap.service.MQMessageSender.jmsTemplate; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+13:40:51.545 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.jms.core.JmsTemplate com.bbva.mmap.service.MQMessageSender.jmsTemplate; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private org.springframework.jms.core.JmsTemplate com.bbva.mmap.service.MQMessageSender.jmsTemplate; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 23 common frames omitted
+13:40:51.551 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:41:25.808 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 4156 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:41:25.812 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:41:25.855 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:41:25 CET 2016]; root of context hierarchy
+13:41:26.091 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:41:27.204 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:41:27.588 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@2b72cb8a
+13:41:27.609 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.219 seconds (JVM running for 2.988)
+13:46:06.892 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 11312 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:46:06.896 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:46:06.984 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:46:06 CET 2016]; root of context hierarchy
+13:46:07.332 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:46:08.113 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:46:08.431 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@5d99c6b5
+13:46:08.449 INFO  com.bbva.mmap.Launcher - Started Launcher in 1.916 seconds (JVM running for 2.802)
+13:47:18.868 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 3476 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:47:18.871 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:47:18.920 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:47:18 CET 2016]; root of context hierarchy
+13:47:19.202 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:47:20.398 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:47:20.737 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@4bf48f6
+13:47:20.758 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.308 seconds (JVM running for 3.119)
+13:47:45.394 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 12484 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:47:45.399 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:47:45.507 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:47:45 CET 2016]; root of context hierarchy
+13:47:45.846 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:47:46.705 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:47:47.036 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@4bf48f6
+13:47:47.055 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.039 seconds (JVM running for 2.917)
+13:49:14.867 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 12864 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:49:14.870 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:49:14.912 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:49:14 CET 2016]; root of context hierarchy
+13:49:15.151 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:49:16.128 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:49:16.327 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:49:16.568 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@5d99c6b5
+13:49:16.589 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.137 seconds (JVM running for 2.85)
+13:49:58.991 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9144 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:49:58.995 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:49:59.090 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:49:59 CET 2016]; root of context hierarchy
+13:49:59.466 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:50:00.219 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:50:00.234 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:29)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:104)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a.CGLIB$mqMessageSender$2(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a$$FastClassBySpringCGLIB$$3a2ce0a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 23 common frames omitted
+13:50:00.244 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:50:30.010 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 2504 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:50:30.014 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:50:30.053 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:50:30 CET 2016]; root of context hierarchy
+13:50:30.288 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:50:31.055 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:50:31.060 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:30)
+	at com.bbva.mmap.service.MQMessageSender.<init>(MQMessageSender.java:26)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:103)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a.CGLIB$mqMessageSender$2(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a$$FastClassBySpringCGLIB$$3a2ce0a1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$c370e30a.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 23 common frames omitted
+13:50:31.069 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:50:47.156 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 14028 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:50:47.162 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:50:47.217 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@740fb309: startup date [Tue Mar 15 13:50:47 CET 2016]; root of context hierarchy
+13:50:47.529 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:50:47.605 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:51:29.990 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9620 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:51:29.997 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:51:30.059 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@43f02ef2: startup date [Tue Mar 15 13:51:30 CET 2016]; root of context hierarchy
+13:51:30.374 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:51:31.015 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:51:31.106 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:51:31.147 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 17 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:30)
+	at com.bbva.mmap.service.MQMessageSender.<init>(MQMessageSender.java:26)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:103)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3.CGLIB$mqMessageSender$8(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3$$FastClassBySpringCGLIB$$8929c300.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 18 common frames omitted
+13:51:31.168 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:54:09.213 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 13480 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:54:09.219 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:54:09.290 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@740fb309: startup date [Tue Mar 15 13:54:09 CET 2016]; root of context hierarchy
+13:54:09.648 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:54:10.325 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:54:10.510 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:54:10.889 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@32f61a31
+13:54:10.912 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.448 seconds (JVM running for 3.58)
+13:55:20.657 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 4892 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:55:20.660 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:55:20.697 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:55:20 CET 2016]; root of context hierarchy
+13:55:20.921 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:55:21.990 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:55:21.998 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:31)
+	at com.bbva.mmap.service.MQMessageSender.<init>(MQMessageSender.java:27)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:109)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3.CGLIB$mqMessageSender$5(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3$$FastClassBySpringCGLIB$$b8fb4c2d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 23 common frames omitted
+13:55:22.007 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:55:47.539 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 6668 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:55:47.543 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:55:47.587 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:55:47 CET 2016]; root of context hierarchy
+13:55:47.829 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:55:48.950 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:55:48.956 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:29)
+	at com.bbva.mmap.service.MQMessageSender.<init>(MQMessageSender.java:25)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:109)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3.CGLIB$mqMessageSender$4(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3$$FastClassBySpringCGLIB$$b8fb4c2d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$dd0cc5d3.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 23 common frames omitted
+13:55:48.965 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:56:28.012 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9356 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:56:28.022 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:56:28.092 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@740fb309: startup date [Tue Mar 15 13:56:28 CET 2016]; root of context hierarchy
+13:56:28.440 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:56:29.145 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:56:29.185 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+13:56:29.201 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mqMessageSender' defined in com.bbva.mmap.conf.ApplicationContext: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:19)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bbva.mmap.service.MQMessageSender]: Factory method 'mqMessageSender' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588)
+	... 17 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.bbva.mmap.service.MQMessageSender.sendMessage(MQMessageSender.java:29)
+	at com.bbva.mmap.service.MQMessageSender.<init>(MQMessageSender.java:25)
+	at com.bbva.mmap.conf.ApplicationContext.mqMessageSender(ApplicationContext.java:109)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3.CGLIB$mqMessageSender$6(<generated>)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3$$FastClassBySpringCGLIB$$8929c300.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:355)
+	at com.bbva.mmap.conf.ApplicationContext$$EnhancerBySpringCGLIB$$ad67e8c3.mqMessageSender(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162)
+	... 18 common frames omitted
+13:56:29.209 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+13:56:46.565 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 13740 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:56:46.571 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:56:46.626 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@740fb309: startup date [Tue Mar 15 13:56:46 CET 2016]; root of context hierarchy
+13:56:47.093 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:56:47.883 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:57:19.826 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:57:20.203 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@213e3629
+13:57:20.224 INFO  com.bbva.mmap.Launcher - Started Launcher in 34.082 seconds (JVM running for 35.171)
+13:57:40.621 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 10256 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+13:57:40.624 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+13:57:40.678 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 13:57:40 CET 2016]; root of context hierarchy
+13:57:40.935 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+13:57:41.824 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+13:57:42.203 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@295cf707
+13:57:42.349 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+13:57:42.506 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+13:57:42.519 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.284 seconds (JVM running for 2.989)
+13:58:45.750 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+13:58:45.751 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  1
+  JMSExpiration:    0
+  JMSPriority:      0
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620088102
+  JMSTimestamp:     1458046725740
+  JMSCorrelationID: null
+  JMSDestination:   null
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: here MQ 7\bin\MQExplorer.exe
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 546
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 11
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 12584574
+Mensaje de Prueba para MQInspector
+15:29:25.649 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 7112 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:29:25.668 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:29:25.752 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:29:25 CET 2016]; root of context hierarchy
+15:29:26.113 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:29:26.766 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:29:26.914 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:29:27.235 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@62833051
+15:29:27.264 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.049 seconds (JVM running for 2.928)
+15:31:52.810 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 13648 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:31:52.814 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:31:52.856 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@58c1c010: startup date [Tue Mar 15 15:31:52 CET 2016]; root of context hierarchy
+15:31:53.225 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:31:54.068 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:31:54.174 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:31:54.490 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@420a85c4
+15:31:54.514 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.06 seconds (JVM running for 3.03)
+15:33:07.132 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 3328 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:33:07.136 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:33:07.237 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@58c1c010: startup date [Tue Mar 15 15:33:07 CET 2016]; root of context hierarchy
+15:33:09.025 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:33:09.854 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:33:09.983 WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jmsMessagingTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$MessagingTemplateConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.springframework.jms.core.JmsTemplate]: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+15:33:09.984 INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+15:33:09.996 ERROR o.s.boot.SpringApplication - Application startup failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jmsMessagingTemplate' defined in class path resource [org/springframework/boot/autoconfigure/jms/JmsAutoConfiguration$MessagingTemplateConfiguration.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [org.springframework.jms.core.JmsTemplate]: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:749)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:464)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:766)
+	at org.springframework.boot.SpringApplication.createAndRefreshContext(SpringApplication.java:361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1191)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1180)
+	at com.bbva.mmap.Launcher.main(Launcher.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [org.springframework.jms.core.JmsTemplate] is defined: expected single matching bean but found 2: outJmsTemplate,inJmsTemplate
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 23 common frames omitted
+15:33:10.004 INFO  o.s.b.l.ClasspathLoggingApplicationListener - Application failed to start with classpath: [file:/D:/Software/Java/JDK%208/jre/lib/charsets.jar, file:/D:/Software/Java/JDK%208/jre/lib/deploy.jar, file:/D:/Software/Java/JDK%208/jre/lib/javaws.jar, file:/D:/Software/Java/JDK%208/jre/lib/jce.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfr.jar, file:/D:/Software/Java/JDK%208/jre/lib/jfxswt.jar, file:/D:/Software/Java/JDK%208/jre/lib/jsse.jar, file:/D:/Software/Java/JDK%208/jre/lib/management-agent.jar, file:/D:/Software/Java/JDK%208/jre/lib/plugin.jar, file:/D:/Software/Java/JDK%208/jre/lib/resources.jar, file:/D:/Software/Java/JDK%208/jre/lib/rt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/access-bridge-64.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/cldrdata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/dnsns.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jaccess.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/jfxrt.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/localedata.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/nashorn.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunec.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunjce_provider.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunmscapi.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/sunpkcs11.jar, file:/D:/Software/Java/JDK%208/jre/lib/ext/zipfs.jar, file:/D:/Workspace/Java/MQInspector/target/classes/, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.3.RELEASE/spring-boot-starter-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot/1.3.3.RELEASE/spring-boot-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.3.RELEASE/spring-boot-autoconfigure-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.3.RELEASE/spring-boot-starter-logging-1.3.3.RELEASE.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-classic/1.1.5/logback-classic-1.1.5.jar, file:/C:/Users/georg/.m2/repository/ch/qos/logback/logback-core/1.1.5/logback-core-1.1.5.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/slf4j-api/1.7.16/slf4j-api-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.16/jcl-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/jul-to-slf4j/1.7.16/jul-to-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.16/log4j-over-slf4j-1.7.16.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/extensions/guice-persist/3.0/guice-persist-3.0.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-jms/4.2.5.RELEASE/spring-jms-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-messaging/4.2.5.RELEASE/spring-messaging-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar, file:/C:/Users/georg/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar, file:/C:/Users/georg/.m2/repository/org/projectlombok/lombok/1.16.8/lombok-1.16.8.jar, file:/C:/Users/georg/.m2/repository/com/google/inject/guice/3.0/guice-3.0.jar, file:/C:/Users/georg/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar, file:/C:/Users/georg/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/georg/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar, file:/C:/Users/georg/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar, file:/C:/Users/georg/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar, file:/C:/Users/georg/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar, file:/C:/Users/georg/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar, file:/C:/Users/georg/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar, file:/C:/Users/georg/.m2/repository/org/apache/logging/log4j/log4j-api/2.2/log4j-api-2.2.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/dhbcore.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.jmqi.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mqjms.jar, file:/D:/Workspace/Java/MQInspector/src/main/resources/lib/com.ibm.mq.headers.jar, file:/D:/Software/Intellij%20Idea/IntelliJ%20IDEA%2014.1.5/lib/idea_rt.jar]
+15:34:17.020 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 13352 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:34:17.029 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:34:17.155 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:34:17 CET 2016]; root of context hierarchy
+15:34:17.502 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:34:18.269 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:34:18.364 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:34:18.664 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@7b7fdc8
+15:34:18.677 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.037 seconds (JVM running for 2.96)
+15:35:16.151 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9772 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:35:16.155 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:35:16.197 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:35:16 CET 2016]; root of context hierarchy
+15:35:16.447 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:35:17.624 INFO  com.bbva.mmap.service.ScheduledTest - The time is now 15:35:17
+15:35:17.648 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:35:17.718 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:35:18.054 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@5d99c6b5
+15:35:18.085 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.304 seconds (JVM running for 3.214)
+15:39:54.479 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 9420 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:39:54.487 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:39:54.603 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:39:54 CET 2016]; root of context hierarchy
+15:39:54.915 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:39:55.501 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:39:56.120 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@7b7fdc8
+15:39:56.192 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:39:56.290 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:39:56.354 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.29 seconds (JVM running for 3.22)
+15:39:56.363 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:39:58.348 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:00.347 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:02.343 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:04.344 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:06.346 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:08.349 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:10.348 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:12.345 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:14.346 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:16.348 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:40:18.345 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
