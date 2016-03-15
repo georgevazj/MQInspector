@@ -2,6 +2,7 @@ package com.bbva.mmap.conf;
 
 import com.bbva.mmap.listener.MQMessageListener;
 import com.bbva.mmap.service.MQMessageSender;
+import com.ibm.mq.MQMessage;
 import com.ibm.mq.jms.MQQueue;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,6 +40,8 @@ public class ApplicationContext {
     private String mqInQueue;
     @Value("${mq.outQueue}")
     private String mqOutQueue;
+    @Value("${mq.message}")
+    private String mqMessage;
 
     //RESUELVE ${} EN @Value
     @Bean
@@ -101,7 +104,7 @@ public class ApplicationContext {
     //BEAN PARA EL MENSAJE DE ENVIO
     @Bean
     public String message(){
-        return "Mensaje de prueba";
+        return mqMessage;
     }
 
     //PRODUCTOR DE MENSAJES

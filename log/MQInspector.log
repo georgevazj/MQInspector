@@ -569,3 +569,394 @@ Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No
 15:40:14.346 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
 15:40:16.348 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
 15:40:18.345 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:29.781 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 12144 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:52:29.798 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:52:29.876 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:52:29 CET 2016]; root of context hierarchy
+15:52:30.222 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:52:32.001 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@609bcfb6
+15:52:32.097 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:32.199 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:52:32.289 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:52:32.320 INFO  com.bbva.mmap.Launcher - Started Launcher in 3.035 seconds (JVM running for 4.108)
+15:52:32.327 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:32.340 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:32.342 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099b02
+  JMSTimestamp:     1458053552159
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14523217
+Mensaje de prueba
+15:52:32.345 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:32.345 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c02
+  JMSTimestamp:     1458053552327
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14523232
+Mensaje de prueba
+15:52:37.316 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:37.322 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:37.323 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c04
+  JMSTimestamp:     1458053557316
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14523731
+Mensaje de prueba
+15:52:42.315 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:42.323 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:42.325 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c06
+  JMSTimestamp:     1458053562316
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14524231
+Mensaje de prueba
+15:52:47.316 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:47.324 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:47.326 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c08
+  JMSTimestamp:     1458053567316
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14524731
+Mensaje de prueba
+15:52:52.311 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:52.329 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:52.330 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c0a
+  JMSTimestamp:     1458053572312
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14525231
+Mensaje de prueba
+15:52:57.316 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:52:57.324 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:52:57.326 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c0c
+  JMSTimestamp:     1458053577317
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14525731
+Mensaje de prueba
+15:53:02.315 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:53:02.323 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:53:02.325 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c0e
+  JMSTimestamp:     1458053582315
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14530231
+Mensaje de prueba
+15:53:07.315 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Mensaje de prueba
+15:53:07.324 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:53:07.326 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e65620099c10
+  JMSTimestamp:     1458053587316
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14530731
+Mensaje de prueba
+15:54:38.800 INFO  com.bbva.mmap.Launcher - Starting Launcher on DESKTOP-UOKULT9 with PID 13252 (D:\Workspace\Java\MQInspector\target\classes started by jorge in D:\Workspace\Java\MQInspector)
+15:54:38.818 INFO  com.bbva.mmap.Launcher - No active profile set, falling back to default profiles: default
+15:54:38.903 INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b7f23d9: startup date [Tue Mar 15 15:54:38 CET 2016]; root of context hierarchy
+15:54:39.274 INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15:54:40.005 INFO  c.b.mmap.listener.MQMessageListener - Escuchando mensajes...
+15:54:40.471 INFO  o.s.j.c.SingleConnectionFactory - Established shared JMS Connection: com.ibm.mq.jms.MQQueueConnection@7b7fdc8
+15:54:40.518 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:54:40.620 INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+15:54:40.655 INFO  com.bbva.mmap.Launcher - Started Launcher in 2.251 seconds (JVM running for 3.22)
+15:54:40.667 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:54:40.698 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:54:40.700 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a402
+  JMSTimestamp:     1458053680543
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14544055
+Hello World
+15:54:40.703 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:54:40.703 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a502
+  JMSTimestamp:     1458053680667
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14544066
+Hello World
+15:54:45.653 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:54:45.659 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:54:45.661 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a504
+  JMSTimestamp:     1458053685654
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14544565
+Hello World
+15:54:50.653 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:54:50.659 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:54:50.660 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a506
+  JMSTimestamp:     1458053690653
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14545065
+Hello World
+15:54:55.648 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:54:55.660 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:54:55.660 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a508
+  JMSTimestamp:     1458053695648
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14545564
+Hello World
+15:55:00.655 INFO  c.bbva.mmap.service.MQMessageSender - Mensaje enviado -> Hello World
+15:55:00.662 INFO  c.b.mmap.listener.MQMessageListener - Mensaje recibido
+15:55:00.663 INFO  c.b.mmap.listener.MQMessageListener - 
+  JMSMessage class: jms_text
+  JMSType:          null
+  JMSDeliveryMode:  2
+  JMSExpiration:    0
+  JMSPriority:      4
+  JMSMessageID:     ID:414d5120514d31202020202020202020ff61e6562009a50a
+  JMSTimestamp:     1458053700656
+  JMSCorrelationID: null
+  JMSDestination:   queue:///SYSTEM.DEFAULT.LOCAL.QUEUE
+  JMSReplyTo:       null
+  JMSRedelivered:   false
+    JMSXAppID: AppMain                     
+    JMSXDeliveryCount: 1
+    JMSXUserID: jorge       
+    JMS_IBM_Character_Set: UTF-8
+    JMS_IBM_Encoding: 273
+    JMS_IBM_Format: MQSTR   
+    JMS_IBM_MsgType: 8
+    JMS_IBM_PutApplType: 28
+    JMS_IBM_PutDate: 20160315
+    JMS_IBM_PutTime: 14550065
+Hello World
