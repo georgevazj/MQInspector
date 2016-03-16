@@ -4,6 +4,7 @@ import com.ibm.mq.MQException;
 import com.ibm.mq.MQMessage;
 import com.ibm.mq.MQQueueManager;
 import com.ibm.mq.constants.CMQC;
+import com.ibm.mq.constants.CMQCFC;
 import com.ibm.mq.constants.MQConstants;
 import com.ibm.mq.headers.MQDataException;
 import com.ibm.mq.headers.pcf.*;
@@ -34,8 +35,22 @@ public class MQGetQueueNames {
         if(mqcfh.getReason()==0){
             mqcfsl = new MQCFSL(responses[0]);
             for (int i=0;i < mqcfsl.getStrings().length;i++){
-                logger.info("Queue: " + mqcfsl.getStrings()[i]);
+                if (logger.isDebugEnabled()){
+                    logger.debug("Queue: " + mqcfsl.getStrings()[i]);
+                }
             }
+        }
+    }
+
+    public void getQueueStatus() throws MQDataException, IOException {
+        PCFMessageAgent pcfMessageAgent = new PCFMessageAgent(mqQueueManager);
+        PCFMessage pcfMessage = new PCFMessage(CMQCFC.MQCMD_INQUIRE_Q_STATUS);
+        pcfMessage.addParameter(CMQC.MQCA_Q_NAME, "MMAP.*");
+        pcfMessage.addParameter(CMQCFC.MQIACF_Q_STATUS_TYPE, CMQCFC.MQCACF_APPL_NAME);
+        PCFMessage[] pcfResp = pcfMessageAgent.send(pcfMessage);
+        for (int i = 0;i < pcfResp.length;i++){
+            logger.info("RESPONSE " + i + ":");
+            logger.info(pcfResp[i].toString());
         }
     }
 

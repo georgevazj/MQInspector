@@ -112,17 +112,17 @@ public class ApplicationContext {
     }
 
     //PRODUCTOR DE MENSAJES
-    @Bean
+    /**@Bean
     public MQMessageSender mqMessageSender() throws JMSException {
         MQMessageSender mqMessageSender = new MQMessageSender();
         mqMessageSender.setOutJmsTemplate(outJmsTemplate());
         mqMessageSender.setMessage(message());
         mqMessageSender.sendMessage();
         return mqMessageSender;
-    }
+    }**/
 
     //LISTENER MQ
-    @Bean
+    /**@Bean
     public MQMessageListener mqMessageListener(){
         return new MQMessageListener();
     }
@@ -135,7 +135,7 @@ public class ApplicationContext {
         listenerContainerFactory.setDestination(inQueue());
         listenerContainerFactory.setMessageListener(mqMessageListener());
         return listenerContainerFactory;
-    }
+    }**/
 
     //BEANS INDEPENDIENTES PARA MQ
     @Bean
@@ -153,7 +153,8 @@ public class ApplicationContext {
         MQGetQueueNames mqGetQueueNames = new MQGetQueueNames();
         mqGetQueueNames.setMqQueueManager(mqQueueManagerBean());
         mqGetQueueNames.setPcfAgent(pcfAgent());
-        mqGetQueueNames.getQueueNames();
+        //mqGetQueueNames.getQueueNames();
+        mqGetQueueNames.getQueueStatus();
         return mqGetQueueNames;
     }
 }
