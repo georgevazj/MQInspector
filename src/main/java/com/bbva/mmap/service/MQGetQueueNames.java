@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 /**
  * Created by jorge on 16/03/2016.
@@ -45,12 +46,12 @@ public class MQGetQueueNames {
     public void getQueueStatus() throws MQDataException, IOException {
         PCFMessageAgent pcfMessageAgent = new PCFMessageAgent(mqQueueManager);
         PCFMessage pcfMessage = new PCFMessage(CMQCFC.MQCMD_INQUIRE_Q_STATUS);
-        pcfMessage.addParameter(CMQC.MQCA_Q_NAME, "MMAP.*");
+        pcfMessage.addParameter(CMQC.MQCA_Q_NAME, "*");
         pcfMessage.addParameter(CMQCFC.MQIACF_Q_STATUS_TYPE, CMQCFC.MQCACF_APPL_NAME);
         PCFMessage[] pcfResp = pcfMessageAgent.send(pcfMessage);
         for (int i = 0;i < pcfResp.length;i++){
-            logger.info("RESPONSE " + i + ":");
-            logger.info(pcfResp[i].toString());
+            System.out.println(pcfResp[i].getParameter(2016).getStringValue());
+            System.out.println(pcfResp[i].getParameter(3058).getStringValue());
         }
     }
 
