@@ -19,7 +19,6 @@
     </build>
 
     <properties>
-        <start-class>com.bbva.mmap.Application</start-class>
         <java.version>1.8</java.version>
         <mq.version>7.5</mq.version>
     </properties>
@@ -97,36 +96,70 @@
             <artifactId>com.ibm.mq</artifactId>
             <scope>system</scope>
             <version>${mq.version}</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/com.ibm.mq.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mq.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.ibm</groupId>
             <artifactId>dhbcore</artifactId>
             <scope>system</scope>
             <version>${mq.version}</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/dhbcore.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/dhbcore.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.ibm</groupId>
             <artifactId>jmqi</artifactId>
             <scope>system</scope>
             <version>${mq.version}</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/com.ibm.mq.jmqi.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mq.jmqi.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.ibm</groupId>
             <artifactId>com.ibm.mqjms</artifactId>
             <scope>system</scope>
             <version>${mq.version}</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/com.ibm.mqjms.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mqjms.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.ibm</groupId>
             <artifactId>com.ibm.headers</artifactId>
             <scope>system</scope>
             <version>${mq.version}</version>
-            <systemPath>${project.basedir}/src/main/resources/lib/com.ibm.mq.headers.jar</systemPath>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mq.headers.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm</groupId>
+            <artifactId>com.ibm.pcf</artifactId>
+            <scope>system</scope>
+            <version>${mq.version}</version>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mq.pcf.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm</groupId>
+            <artifactId>com.ibm</artifactId>
+            <scope>system</scope>
+            <version>${mq.version}</version>
+            <systemPath>${pom.basedir}/src/main/resources/lib/com.ibm.mq.commonservices.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javax.resource</groupId>
+            <artifactId>connector</artifactId>
+            <scope>system</scope>
+            <version>${mq.version}</version>
+            <systemPath>${pom.basedir}/src/main/resources/lib/connector.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>javax.naming</groupId>
+            <artifactId>jndi</artifactId>
+            <scope>system</scope>
+            <version>${mq.version}</version>
+            <systemPath>${pom.basedir}/src/main/resources/lib/jndi.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>jndi</artifactId>
+            <scope>system</scope>
+            <version>${mq.version}</version>
+            <systemPath>${pom.basedir}/src/main/resources/lib/ldap.jar</systemPath>
         </dependency>
     </dependencies>
-
 </project>

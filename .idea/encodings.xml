@@ -2,8 +2,26 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/CL3Export.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/CL3Nonexport.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/com.ibm.mq.commonservices.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/com.ibm.mq.pcf.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/connector.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/fscontext.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/jndi.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/ldap.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/providerutil.jar" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/lib/rmm.jar" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/../MQProducer/target/MQServer.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../MQProducer/target/conf/MQServer.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../MQProducer/target/config/MQServer.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../MQProducer/target/lib" charset="UTF-8" />
   </component>
 </project>

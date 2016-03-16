@@ -1,7 +1,12 @@
 package com.bbva.mmap.conf;
 
 import com.bbva.mmap.listener.MQMessageListener;
+import com.bbva.mmap.service.MQGetQueueNames;
 import com.bbva.mmap.service.MQMessageSender;
+import com.ibm.mq.MQException;
+import com.ibm.mq.MQQueueManager;
+import com.ibm.mq.headers.MQDataException;
+import com.ibm.mq.headers.pcf.PCFAgent;
 import com.ibm.mq.jms.MQQueue;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +20,7 @@ import org.springframework.jms.listener.DefaultMessageListenerContainer;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.JMSException;
+import java.io.IOException;
 
 /**
  * Created by jorge on 15/03/2016.
@@ -129,5 +135,25 @@ public class ApplicationContext {
         listenerContainerFactory.setDestination(inQueue());
         listenerContainerFactory.setMessageListener(mqMessageListener());
         return listenerContainerFactory;
+    }
+
+    //BEANS INDEPENDIENTES PARA MQ
+    @Bean
+    public MQQueueManager mqQueueManagerBean() throws MQException {
+        return new MQQueueManager(mqQueueManager);
+    }
+
+    @Bean
+    public PCFAgent pcfAgent() throws MQException, MQDataException {
+        return new PCFAgent(mqHostName,mqPort,mqChannel);
+    }
+
+    @Bean
+    public MQGetQueueNames mqGetQueueNames() throws MQException, MQDataException, IOException {
+        MQGetQueueNames mqGetQueueNames = new MQGetQueueNames();
+        mqGetQueueNames.setMqQueueManager(mqQueueManagerBean());
+        mqGetQueueNames.setPcfAgent(pcfAgent());
+        mqGetQueueNames.getQueueNames();
+        return mqGetQueueNames;
     }
 }

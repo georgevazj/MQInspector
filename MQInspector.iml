@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/bbva/mmap/conf/ApplicationContext.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/bbva/mmap/Launcher.java</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -98,6 +108,51 @@
       <library name="Maven: com.ibm:com.ibm.headers:7.5">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/src/main/resources/lib/com.ibm.mq.headers.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.ibm:com.ibm.pcf:7.5">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/lib/com.ibm.mq.pcf.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.ibm:com.ibm:7.5">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/lib/com.ibm.mq.commonservices.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: javax.resource:connector:7.5">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/lib/connector.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: javax.naming:jndi:7.5">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/lib/jndi.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.sun:jndi:7.5">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/lib/ldap.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

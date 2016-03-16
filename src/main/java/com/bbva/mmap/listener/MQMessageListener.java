@@ -15,7 +15,7 @@ public class MQMessageListener implements MessageListener {
     private static final Logger logger = LoggerFactory.getLogger(MQMessageListener.class);
 
     public MQMessageListener(){
-        logger.info("Escuchando mensajes...");
+        logger.info("Listening...");
     }
 
     @Override
