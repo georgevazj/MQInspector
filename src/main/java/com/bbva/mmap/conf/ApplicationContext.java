@@ -2,7 +2,6 @@ package com.bbva.mmap.conf;
 
 import com.bbva.mmap.listener.MQMessageListener;
 import com.bbva.mmap.service.MQMessageSender;
-import com.ibm.mq.MQMessage;
 import com.ibm.mq.jms.MQQueue;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +12,6 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jms.connection.SingleConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.listener.DefaultMessageListenerContainer;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.JMSException;
@@ -24,7 +22,7 @@ import javax.jms.JMSException;
 
 @Configuration
 @EnableScheduling
-@PropertySource("classpath:conf/MQServer.properties")
+@PropertySource("file:config/MQServer.properties")
 public class ApplicationContext {
 
     //PARAMETROS PARA LA CONEXION CON MQ
