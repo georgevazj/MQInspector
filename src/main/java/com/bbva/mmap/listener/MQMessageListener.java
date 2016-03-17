@@ -1,7 +1,6 @@
 package com.bbva.mmap.listener;
 
 
-import com.bbva.mmap.service.MQMessageSender;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -10,8 +10,10 @@ import com.ibm.mq.headers.pcf.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
-import javax.xml.bind.JAXBException;
+import javax.xml.transform.stream.StreamResult;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -22,7 +24,7 @@ public class MQInfo {
     private static final Logger logger = LoggerFactory.getLogger(MQInfo.class);
 
     @Autowired
-    public MQInfo(MQQueueManager mqQueueManager,MQInfoModel mqInfoModel,MQConnectionModel mqConnectionModel) throws MQDataException, IOException {
+    public MQInfo(MQQueueManager mqQueueManager,MQInfoModel mqInfoModel,MQConnectionModel mqConnectionModel,Jaxb2Marshaller jaxb2Marshaller) throws MQDataException, IOException {
         PCFMessageAgent pcfMessageAgent = new PCFMessageAgent(mqQueueManager);
         PCFMessage pcfMessage = new PCFMessage(CMQCFC.MQCMD_INQUIRE_Q_STATUS);
         pcfMessage.addParameter(CMQC.MQCA_Q_NAME, "*");
@@ -35,5 +37,7 @@ public class MQInfo {
             mqConnectionModel.setMQConnectionName(pcfResp[i].getParameter(3506).getStringValue());
             mqInfoModel.getMqConnections().add(mqConnectionModel);
         }
+        jaxb2Marshaller.marshal(mqInfoModel,new StreamResult(new FileWriter("test.xml")));
     }
+
 }

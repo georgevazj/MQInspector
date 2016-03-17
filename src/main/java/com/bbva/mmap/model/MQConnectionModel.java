@@ -1,5 +1,7 @@
 package com.bbva.mmap.model;
 
+import org.springframework.stereotype.Service;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;

@@ -8,9 +8,9 @@ import com.ibm.mq.MQQueueManager;
 import com.ibm.mq.headers.MQDataException;
 import com.ibm.mq.headers.pcf.PCFAgent;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
-import org.springframework.batch.item.xml.StaxEventItemWriter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
@@ -20,12 +20,8 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.JMSException;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by jorge on 15/03/2016.
@@ -96,17 +92,17 @@ public class ApplicationContext {
         return new MQInfoModel();
     }
 
-    //Se obtienen las conexiones desde MQ
-    @Bean
-    public MQInfo mqInfo() throws MQException, MQDataException, IOException, JAXBException {
-        return new MQInfo(mqQueueManagerBean(),mqInfoModel(),mqConnectionModel());
-    }
-
     @Bean
     public Jaxb2Marshaller jaxb2Marshaller(){
         Jaxb2Marshaller jaxb2Marshaller = new Jaxb2Marshaller();
         jaxb2Marshaller.setClassesToBeBound(com.bbva.mmap.model.MQInfoModel.class);
         return jaxb2Marshaller;
+    }
+
+    //Se obtienen las conexiones desde MQ
+    @Bean
+    public MQInfo mqInfo() throws MQException, MQDataException, IOException, JAXBException {
+        return new MQInfo(mqQueueManagerBean(),mqInfoModel(),mqConnectionModel(),jaxb2Marshaller());
     }
 
 }
