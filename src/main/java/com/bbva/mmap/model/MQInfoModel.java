@@ -3,10 +3,7 @@ package com.bbva.mmap.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +11,14 @@ import java.util.List;
  * Created by jorge on 17/03/2016.
  */
 
-@XmlRootElement(name = "MQConnections")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "IntegrationMap")
+@XmlType(propOrder = {"mqConnections"})
 public class MQInfoModel {
 
-    @XmlElement(name="connection")
     private List<MQConnectionModel> mqConnections = new ArrayList<MQConnectionModel>();
 
-
+    @XmlElementWrapper(name = "MQConnections")
+    @XmlElement(name="Connection")
     public List<MQConnectionModel> getMqConnections() {
         return mqConnections;
     }

@@ -10,16 +10,16 @@ import com.ibm.mq.headers.pcf.PCFAgent;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.io.Resource;
 import org.springframework.jms.connection.SingleConnectionFactory;
+import javax.xml.bind.Marshaller;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.JMSException;
+import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
@@ -41,8 +41,8 @@ public class ApplicationContext {
     private String mqQueueManager;
     @Value("${mq.channel}")
     private String mqChannel;
-    @Value("file:"+"${writer.output}")
-    private Resource outputPath;
+    @Value("${writer.output}")
+    private String outputXML;
 
     //RESUELVE ${} EN @Value
     @Bean
@@ -99,10 +99,24 @@ public class ApplicationContext {
         return jaxb2Marshaller;
     }
 
+    @Bean
+    public Marshaller jaxbMarshaller() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(com.bbva.mmap.model.MQInfoModel.class);
+        Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+        return jaxbMarshaller;
+    }
+
+    //Se inyecta la ruta en mqInfo()
+    @Bean
+    public String getOutputXML(){
+        return outputXML;
+    }
+
     //Se obtienen las conexiones desde MQ
     @Bean
     public MQInfo mqInfo() throws MQException, MQDataException, IOException, JAXBException {
-        return new MQInfo(mqQueueManagerBean(),mqInfoModel(),mqConnectionModel(),jaxb2Marshaller());
+        return new MQInfo(getOutputXML(), mqQueueManagerBean(),mqInfoModel(),mqConnectionModel(),jaxbMarshaller());
     }
 
 }

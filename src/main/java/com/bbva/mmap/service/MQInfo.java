@@ -10,8 +10,10 @@ import com.ibm.mq.headers.pcf.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+import org.springframework.beans.factory.annotation.Value;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,25 +21,28 @@ import java.io.IOException;
 /**
  * Created by jorge on 16/03/2016.
  */
-
 public class MQInfo {
     private static final Logger logger = LoggerFactory.getLogger(MQInfo.class);
+    @Value("${writer.output}")
+    private String outputPath;
 
     @Autowired
-    public MQInfo(MQQueueManager mqQueueManager,MQInfoModel mqInfoModel,MQConnectionModel mqConnectionModel,Jaxb2Marshaller jaxb2Marshaller) throws MQDataException, IOException {
+    public MQInfo(String outputPath,MQQueueManager mqQueueManager,MQInfoModel mqInfoModel,MQConnectionModel mqConnectionModel,Marshaller jaxbMarshaller) throws MQDataException, IOException, JAXBException {
         PCFMessageAgent pcfMessageAgent = new PCFMessageAgent(mqQueueManager);
         PCFMessage pcfMessage = new PCFMessage(CMQCFC.MQCMD_INQUIRE_Q_STATUS);
         pcfMessage.addParameter(CMQC.MQCA_Q_NAME, "*");
         pcfMessage.addParameter(CMQCFC.MQIACF_Q_STATUS_TYPE, CMQCFC.MQCACF_APPL_NAME);
         PCFMessage[] pcfResp = pcfMessageAgent.send(pcfMessage);
         for (int i = 0;i < pcfResp.length;i++){
+            mqConnectionModel = new MQConnectionModel();
             mqConnectionModel.setMQQueueName(pcfResp[i].getParameter(2016).getStringValue());
             mqConnectionModel.setMQClientName(pcfResp[i].getParameter(3058).getStringValue());
             mqConnectionModel.setMQChannelName(pcfResp[i].getParameter(3501).getStringValue());
             mqConnectionModel.setMQConnectionName(pcfResp[i].getParameter(3506).getStringValue());
+            mqConnectionModel.setMQUSerName(pcfResp[i].getParameter(3025).getStringValue());
             mqInfoModel.getMqConnections().add(mqConnectionModel);
         }
-        jaxb2Marshaller.marshal(mqInfoModel,new StreamResult(new FileWriter("test.xml")));
+        jaxbMarshaller.marshal(mqInfoModel,new StreamResult(new FileWriter(outputPath)));
     }
 
 }
