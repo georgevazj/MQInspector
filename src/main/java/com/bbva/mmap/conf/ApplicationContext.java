@@ -1,26 +1,31 @@
 package com.bbva.mmap.conf;
 
-import com.bbva.mmap.listener.MQMessageListener;
-import com.bbva.mmap.service.MQGetQueueNames;
-import com.bbva.mmap.service.MQMessageSender;
+import com.bbva.mmap.model.MQConnectionModel;
+import com.bbva.mmap.model.MQInfoModel;
+import com.bbva.mmap.service.MQInfo;
 import com.ibm.mq.MQException;
 import com.ibm.mq.MQQueueManager;
 import com.ibm.mq.headers.MQDataException;
 import com.ibm.mq.headers.pcf.PCFAgent;
-import com.ibm.mq.jms.MQQueue;
 import com.ibm.mq.jms.MQQueueConnectionFactory;
+import org.springframework.batch.item.xml.StaxEventItemWriter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.io.Resource;
 import org.springframework.jms.connection.SingleConnectionFactory;
-import org.springframework.jms.core.JmsTemplate;
-import org.springframework.jms.listener.DefaultMessageListenerContainer;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.jms.JMSException;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by jorge on 15/03/2016.
@@ -40,12 +45,8 @@ public class ApplicationContext {
     private String mqQueueManager;
     @Value("${mq.channel}")
     private String mqChannel;
-    @Value("${mq.inQueue}")
-    private String mqInQueue;
-    @Value("${mq.outQueue}")
-    private String mqOutQueue;
-    @Value("${mq.message}")
-    private String mqMessage;
+    @Value("file:"+"${writer.output}")
+    private Resource outputPath;
 
     //RESUELVE ${} EN @Value
     @Bean
@@ -65,20 +66,6 @@ public class ApplicationContext {
         return mqQueueConnectionFactory;
     }
 
-    //COLA DE SALIDA PARA MQ
-    @Bean
-    public MQQueue outQueue() throws JMSException {
-        MQQueue mqQueue = new MQQueue(mqOutQueue);
-        return mqQueue;
-    }
-
-    //COLA DE ENTRADA DESDE MQ
-    @Bean
-    public MQQueue inQueue() throws JMSException{
-        MQQueue mqQueue = new MQQueue(mqInQueue);
-        return mqQueue;
-    }
-
     //CONNECTION FACTORY A PARTIR DE LOS PARAMETROS PARA MQ
     @Bean
     public SingleConnectionFactory singleConnectionFactory() throws JMSException {
@@ -86,56 +73,6 @@ public class ApplicationContext {
         singleConnectionFactory.setTargetConnectionFactory(mqQueueConnectionFactory());
         return singleConnectionFactory;
     }
-
-    //BEAN PARA EL ENVIO DE MENSAJES - MQOUTQUEUE
-    @Bean
-    public JmsTemplate outJmsTemplate() throws JMSException {
-        JmsTemplate jmsTemplate = new JmsTemplate();
-        jmsTemplate.setDefaultDestination(outQueue());
-        jmsTemplate.setConnectionFactory(singleConnectionFactory());
-        return jmsTemplate;
-    }
-
-    //TEMPLATE PARA LA RECEPCION DE MENSAJES - MQINQUEUE
-    @Bean
-    public JmsTemplate inJmsTemplate() throws JMSException {
-        JmsTemplate jmsTemplate = new JmsTemplate();
-        jmsTemplate.setDefaultDestination(inQueue());
-        jmsTemplate.setConnectionFactory(singleConnectionFactory());
-        return jmsTemplate;
-    }
-
-    //BEAN PARA EL MENSAJE DE ENVIO
-    @Bean
-    public String message(){
-        return mqMessage;
-    }
-
-    //PRODUCTOR DE MENSAJES
-    /**@Bean
-    public MQMessageSender mqMessageSender() throws JMSException {
-        MQMessageSender mqMessageSender = new MQMessageSender();
-        mqMessageSender.setOutJmsTemplate(outJmsTemplate());
-        mqMessageSender.setMessage(message());
-        mqMessageSender.sendMessage();
-        return mqMessageSender;
-    }**/
-
-    //LISTENER MQ
-    /**@Bean
-    public MQMessageListener mqMessageListener(){
-        return new MQMessageListener();
-    }
-
-    //CONTENEDOR PARA EL LISTENER
-    @Bean
-    public DefaultMessageListenerContainer jmsListenerContainerFactory() throws JMSException {
-        DefaultMessageListenerContainer listenerContainerFactory = new DefaultMessageListenerContainer();
-        listenerContainerFactory.setConnectionFactory(singleConnectionFactory());
-        listenerContainerFactory.setDestination(inQueue());
-        listenerContainerFactory.setMessageListener(mqMessageListener());
-        return listenerContainerFactory;
-    }**/
 
     //BEANS INDEPENDIENTES PARA MQ
     @Bean
@@ -148,13 +85,28 @@ public class ApplicationContext {
         return new PCFAgent(mqHostName,mqPort,mqChannel);
     }
 
+    //Modelos de datos
     @Bean
-    public MQGetQueueNames mqGetQueueNames() throws MQException, MQDataException, IOException {
-        MQGetQueueNames mqGetQueueNames = new MQGetQueueNames();
-        mqGetQueueNames.setMqQueueManager(mqQueueManagerBean());
-        mqGetQueueNames.setPcfAgent(pcfAgent());
-        //mqGetQueueNames.getQueueNames();
-        mqGetQueueNames.getQueueStatus();
-        return mqGetQueueNames;
+    public MQConnectionModel mqConnectionModel(){
+        return new MQConnectionModel();
     }
+
+    @Bean
+    public MQInfoModel mqInfoModel(){
+        return new MQInfoModel();
+    }
+
+    //Se obtienen las conexiones desde MQ
+    @Bean
+    public MQInfo mqInfo() throws MQException, MQDataException, IOException, JAXBException {
+        return new MQInfo(mqQueueManagerBean(),mqInfoModel(),mqConnectionModel());
+    }
+
+    @Bean
+    public Jaxb2Marshaller jaxb2Marshaller(){
+        Jaxb2Marshaller jaxb2Marshaller = new Jaxb2Marshaller();
+        jaxb2Marshaller.setClassesToBeBound(com.bbva.mmap.model.MQInfoModel.class);
+        return jaxb2Marshaller;
+    }
+
 }

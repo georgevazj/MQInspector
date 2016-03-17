@@ -21,6 +21,8 @@
     <properties>
         <java.version>1.8</java.version>
         <mq.version>7.5</mq.version>
+        <springframework.version>4.2.4.RELEASE</springframework.version>
+        <springbatch.version>3.0.1.RELEASE</springbatch.version>
     </properties>
 
     <parent>
@@ -38,6 +40,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>${springbatch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-infrastructure</artifactId>
+            <version>${springbatch.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.inject.extensions</groupId>
