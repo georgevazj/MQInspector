@@ -35,11 +35,11 @@ public class MQInfo {
         PCFMessage[] pcfResp = pcfMessageAgent.send(pcfMessage);
         for (int i = 0;i < pcfResp.length;i++){
             mqConnectionModel = new MQConnectionModel();
-            mqConnectionModel.setMQQueueName(pcfResp[i].getParameter(2016).getStringValue());
-            mqConnectionModel.setMQClientName(pcfResp[i].getParameter(3058).getStringValue());
-            mqConnectionModel.setMQChannelName(pcfResp[i].getParameter(3501).getStringValue());
-            mqConnectionModel.setMQConnectionName(pcfResp[i].getParameter(3506).getStringValue());
-            mqConnectionModel.setMQUSerName(pcfResp[i].getParameter(3025).getStringValue());
+            mqConnectionModel.setMQQueueName(pcfResp[i].getParameter(2016).getStringValue().trim());
+            mqConnectionModel.setMQClientName(pcfResp[i].getParameter(3058).getStringValue().trim());
+            mqConnectionModel.setMQChannelName(pcfResp[i].getParameter(3501).getStringValue().trim());
+            mqConnectionModel.setMQConnectionName(pcfResp[i].getParameter(3506).getStringValue().trim());
+            mqConnectionModel.setMQUSerName(pcfResp[i].getParameter(3025).getStringValue().trim());
             mqInfoModel.getMqConnections().add(mqConnectionModel);
         }
         jaxbMarshaller.marshal(mqInfoModel,new StreamResult(new FileWriter(outputPath)));

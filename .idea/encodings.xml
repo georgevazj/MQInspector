@@ -12,16 +12,5 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/lib/ldap.jar" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/resources/lib/providerutil.jar" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/main/resources/lib/rmm.jar" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/MQServer.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/conf/MQServer.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/config/MQServer.properties" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../MQProducer/target/lib" charset="UTF-8" />
   </component>
 </project>
